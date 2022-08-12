@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartButton: {fileID: 238657044}
+  SceneLoader: {fileID: 297150174}
 --- !u!114 &297150174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c14502644f9f5646baff2e2e6d18824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameObject: {fileID: 0}
 --- !u!1 &388740094
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 1997355659}
   - component: {fileID: 1997355658}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
