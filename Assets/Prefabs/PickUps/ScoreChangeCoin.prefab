@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5101647729902232426}
   - component: {fileID: 3138946972162024220}
   - component: {fileID: 2331585946077587610}
+  - component: {fileID: -9048324958674248139}
   m_Layer: 8
   m_Name: ScoreChangeCoin
   m_TagString: PickUp
@@ -123,3 +124,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32000008
+--- !u!114 &-9048324958674248139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5068665570106746028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f64f1efdb74aa58374944d5f8f1a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _score: 5

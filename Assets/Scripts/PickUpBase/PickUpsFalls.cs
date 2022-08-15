@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class PickUpsFalls : MonoBehaviour
@@ -6,6 +7,8 @@ public class PickUpsFalls : MonoBehaviour
     #region Variables
 
     [SerializeField] private GameObject[] _pickUpsArray;
+
+    [SerializeField] private float _fallSpeed = 10f; 
 
     #endregion
 
@@ -15,6 +18,22 @@ public class PickUpsFalls : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("SpawnPickUps", 1, 4);
+    }
+
+    private void Update()
+    {
+        Debug.Log($"Speed of obj: {_fallSpeed}");
+    }
+
+    #endregion
+
+
+    #region Public methods
+
+    public void ChangeSpeed(float speed)
+    {
+        _fallSpeed += speed;   
+        transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
     }
 
     #endregion

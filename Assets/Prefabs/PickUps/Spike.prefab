@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5568865514755624591}
   - component: {fileID: 2309189482146942713}
   - component: {fileID: 8900169490991784950}
+  - component: {fileID: 7257603281717896679}
   m_Layer: 8
   m_Name: Spike
   m_TagString: PickUp
@@ -154,3 +155,16 @@ PolygonCollider2D:
       - {x: 0.45151138, y: 0.448954}
       - {x: 0.3466928, y: 0.45373118}
       - {x: 0.34670898, y: 0.5460178}
+--- !u!114 &7257603281717896679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5608002165153565001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ae779d2c2b404bb45a7d5991cfbc9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10

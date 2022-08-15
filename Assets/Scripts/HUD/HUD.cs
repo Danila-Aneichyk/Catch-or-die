@@ -6,7 +6,7 @@ public class HUD : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] public SceneLoader SceneLoader; 
+    [SerializeField] public SceneLoader SceneLoader;
     [Header("Values")]
     [SerializeField] public int NumOfHearts;
     [Header("UI")]
@@ -19,6 +19,13 @@ public class HUD : MonoBehaviour
 
 
     #region Unity lifecycle
+
+    private void Start()
+    {
+        ScoreManager.Instance.OnScoreChange += ScoreChanged;
+
+        ScoreChanged(ScoreManager.Instance.Score);
+    }
 
     private void Update()
     {
@@ -36,8 +43,23 @@ public class HUD : MonoBehaviour
 
             if (healthPoints > 0)
                 continue;
-            SceneLoader.RestartScene(); 
+            SceneLoader.RestartScene();
         }
+    }
+
+    private void OnDestroy()
+    {
+        ScoreManager.Instance.OnScoreChange -= ScoreChanged;
+    }
+
+    #endregion
+
+
+    #region Private methods
+
+    private void ScoreChanged(int score)
+    {
+        _scoreLabel.text = $"Score: {ScoreManager.Instance.Score}";
     }
 
     #endregion
