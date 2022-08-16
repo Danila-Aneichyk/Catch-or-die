@@ -1,8 +1,20 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public abstract class PickUpBase : MonoBehaviour
 {
+    #region Variables
+
+    private Rigidbody2D _rb; 
+
+    #endregion
     #region Unity lifecycle
+
+    private void Awake()
+    {
+        _rb = GetComponent<Rigidbody2D>(); 
+    }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
@@ -15,6 +27,15 @@ public abstract class PickUpBase : MonoBehaviour
 
     #endregion
 
+
+    #region Public methods
+
+    public void SetSpeed(float speed)
+    {
+        _rb.velocity = new Vector2(0, -speed); 
+    }
+
+    #endregion
 
     #region Private regions
 

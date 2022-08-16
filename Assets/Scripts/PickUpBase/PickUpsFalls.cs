@@ -5,11 +5,11 @@ public class PickUpsFalls : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] private GameObject[] _pickUpsArray;
+    [SerializeField] private PickUpBase[] _pickUpsArray;
 
     [SerializeField] private float _fallSpeed;
 
-    [SerializeField] private float _minSpeed;
+    [SerializeField] private float _maxSpeed;
 
     #endregion
 
@@ -33,10 +33,10 @@ public class PickUpsFalls : MonoBehaviour
 
     public void ChangeSpeed(float speed)
     {
-        if (_fallSpeed <= _minSpeed)
-            _fallSpeed = _minSpeed;
         _fallSpeed += speed;
-        //transform.position -= new Vector3(0, speed * Time.deltaTime, 0); пытался изменить скорость падения пикапов
+
+        if (_fallSpeed >= _maxSpeed)
+            _fallSpeed = _maxSpeed;
     }
 
     #endregion
@@ -47,7 +47,9 @@ public class PickUpsFalls : MonoBehaviour
     private void SpawnPickUps()
     {
         int randomNumber = Random.Range(0, _pickUpsArray.Length);
-        Instantiate(_pickUpsArray[randomNumber], new Vector3(Random.Range(-2.8f, 2.8f), 4, 0.1f), Quaternion.identity);
+        PickUpBase pickUp = Instantiate(_pickUpsArray[randomNumber], new Vector3(Random.Range(-2.8f, 2.8f), 4, 0.1f),
+            Quaternion.identity);
+        pickUp.SetSpeed(_fallSpeed);
     }
 
     #endregion
