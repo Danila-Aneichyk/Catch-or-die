@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class PickUpsFalls : MonoBehaviour
@@ -8,7 +7,9 @@ public class PickUpsFalls : MonoBehaviour
 
     [SerializeField] private GameObject[] _pickUpsArray;
 
-    [SerializeField] private float _fallSpeed = 10f; 
+    [SerializeField] private float _fallSpeed;
+
+    [SerializeField] private float _minSpeed;
 
     #endregion
 
@@ -32,8 +33,10 @@ public class PickUpsFalls : MonoBehaviour
 
     public void ChangeSpeed(float speed)
     {
-        _fallSpeed += speed;   
-        transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
+        if (_fallSpeed <= _minSpeed)
+            _fallSpeed = _minSpeed;
+        _fallSpeed += speed;
+        //transform.position -= new Vector3(0, speed * Time.deltaTime, 0); пытался изменить скорость падения пикапов
     }
 
     #endregion

@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 
-public class SpeedFallChangedPickUp : PickUpBase
+public class SpeedSpawnChangedPickUp : PickUpBase
 {
     #region Variables
 
-    [SerializeField] public int speed; 
+    [SerializeField] public float speed;
 
     #endregion
+
+
     protected override void ApplyEffect(Collision2D col)
     {
         FindObjectOfType<PickUpsFalls>().ChangeSpeed(speed);

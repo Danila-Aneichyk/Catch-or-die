@@ -7,7 +7,7 @@ public class StartScreen : MonoBehaviour
 
     [SerializeField] public Button StartButton;
 
-    [SerializeField] public SceneLoader SceneLoader; 
+    [SerializeField] public SceneLoader SceneLoader;
 
     #endregion
 
@@ -25,7 +25,7 @@ public class StartScreen : MonoBehaviour
     #region Private methods
 
     private void MoveToNextScene()
-    { 
+    {
         SceneLoader.SceneLoading();
     }
 

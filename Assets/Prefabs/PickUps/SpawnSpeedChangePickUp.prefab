@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8900169490991784950}
   - component: {fileID: 7257603281717896679}
   m_Layer: 8
-  m_Name: Spike
+  m_Name: SpawnSpeedChangePickUp
   m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,4 +167,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ae779d2c2b404bb45a7d5991cfbc9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1
+  speed: -0.4

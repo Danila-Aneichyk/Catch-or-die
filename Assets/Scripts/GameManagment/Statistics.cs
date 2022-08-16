@@ -4,7 +4,7 @@ public class Statistics : SingletonMonoBehavior<Statistics>
 {
     #region Variables
 
-    [SerializeField] private int _maxHp; 
+    [SerializeField] private int _maxHp;
 
     #endregion
 
@@ -21,7 +21,7 @@ public class Statistics : SingletonMonoBehavior<Statistics>
     protected override void Awake()
     {
         base.Awake();
-        CurrentHp = _maxHp; 
+        CurrentHp = _maxHp;
     }
 
     #endregion
