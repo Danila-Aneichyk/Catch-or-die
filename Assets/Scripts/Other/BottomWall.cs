@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BottomWall : MonoBehaviour
 {
@@ -7,7 +6,22 @@ public class BottomWall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        Destroy(col.gameObject);
+        if (col.gameObject.CompareTag(Tags.PositivePickUp))
+        {
+            DecrementHp(); 
+        }
+        Destroy(col.gameObject); 
+        
+    }
+
+    #endregion
+
+
+    #region Private methods
+
+    private void DecrementHp()
+    {
+        Statistics.Instance.CurrentHp--;
     }
 
     #endregion

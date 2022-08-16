@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6380739166544706803}
   m_Layer: 8
   m_Name: HealthHealingBullet
-  m_TagString: PickUp
+  m_TagString: PositivePickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

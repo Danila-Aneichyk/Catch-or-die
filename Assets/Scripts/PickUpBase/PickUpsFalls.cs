@@ -17,7 +17,7 @@ public class PickUpsFalls : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnPickUps", 1, 4);
+        InvokeRepeating("SpawnPickUps", 1, _fallSpeed);
     }
 
     private void Update()
