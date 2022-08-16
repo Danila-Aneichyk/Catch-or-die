@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5254902}
+  m_Color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -610,6 +610,7 @@ MonoBehaviour:
   - {fileID: 2599425478170392667, guid: 8009fce8d7553d54c99c1d756f9138a9, type: 3}
   - {fileID: 5514219628821526042, guid: 723e08979728ef040843cf6494198e34, type: 3}
   _fallSpeed: 4
+  _minSpeed: 0
 --- !u!4 &399113137
 Transform:
   m_ObjectHideFlags: 0
@@ -1311,7 +1312,7 @@ MonoBehaviour:
   - {fileID: 1477011124}
   - {fileID: 288954696}
   FullHeart: {fileID: 21300000, guid: bd9790dc83c58584d9851bad5dfd5da9, type: 3}
-  EmptyHeart: {fileID: 21300000, guid: 665f066e4b0b2254694cc0ea77dbf5ac, type: 3}
+  EmptyHeart: {fileID: 21300000, guid: ee5b23156fef89d46bfbea69bfe8da62, type: 3}
 --- !u!1 &1983809655
 GameObject:
   m_ObjectHideFlags: 0
