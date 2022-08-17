@@ -7,8 +7,12 @@ public abstract class PickUpBase : MonoBehaviour
     #region Variables
 
     private Rigidbody2D _rb;
-
+    
+    [Header("Music")]
     [SerializeField] private AudioClip _audioClip;
+
+    [Header("VFX")]
+    [SerializeField] private GameObject _vfxPrefab; 
 
     #endregion
 
@@ -28,6 +32,15 @@ public abstract class PickUpBase : MonoBehaviour
         ApplyEffect(col);
         Destroy(gameObject);
         AudioPlayer.Instance.PlaySound(_audioClip);
+        SpawnVFX();
+    }
+
+    private void SpawnVFX()
+    {
+        if (_vfxPrefab == null)
+            return;
+
+        Instantiate(_vfxPrefab, transform.position, Quaternion.identity); 
     }
 
     #endregion

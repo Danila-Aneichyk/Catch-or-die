@@ -137,4 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 5ab8fc664ca4d604f820e255005a664a, type: 3}
+  _vfxPrefab: {fileID: 100000, guid: 3156817f64ec68948ad6bb26569b9ef5, type: 3}
   _score: 2
