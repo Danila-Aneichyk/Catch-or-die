@@ -1,8 +1,9 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HUD : MonoBehaviour
+public class HUD : SingletonMonoBehavior<HUD>
 {
     #region Variables
 
@@ -17,6 +18,12 @@ public class HUD : MonoBehaviour
 
     #endregion
 
+
+    #region Events
+
+    public event Action OnGameOver;
+
+    #endregion
 
     #region Unity lifecycle
 
@@ -41,9 +48,11 @@ public class HUD : MonoBehaviour
 
             hearts[i].enabled = i < NumOfHearts;
 
-            if (healthPoints > 0)
-                continue;
-            SceneLoader.RestartScene();
+            if (healthPoints <= 0)
+            {
+                OnGameOver?.Invoke(); 
+            }
+            
         }
     }
 

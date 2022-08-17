@@ -26,7 +26,7 @@ public class StartScreen : MonoBehaviour
 
     private void MoveToNextScene()
     {
-        SceneLoader.SceneLoading();
+        SceneLoader.SceneLoading(1);
     }
 
     #endregion

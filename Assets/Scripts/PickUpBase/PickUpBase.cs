@@ -6,14 +6,18 @@ public abstract class PickUpBase : MonoBehaviour
 {
     #region Variables
 
-    private Rigidbody2D _rb; 
+    private Rigidbody2D _rb;
+
+    [SerializeField] private AudioClip _audioClip;
 
     #endregion
+
+
     #region Unity lifecycle
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>(); 
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -23,6 +27,7 @@ public abstract class PickUpBase : MonoBehaviour
 
         ApplyEffect(col);
         Destroy(gameObject);
+        AudioPlayer.Instance.PlaySound(_audioClip);
     }
 
     #endregion
@@ -32,10 +37,11 @@ public abstract class PickUpBase : MonoBehaviour
 
     public void SetSpeed(float speed)
     {
-        _rb.velocity = new Vector2(0, -speed); 
+        _rb.velocity = new Vector2(0, -speed);
     }
 
     #endregion
+
 
     #region Private regions
 

@@ -5,9 +5,9 @@ public class SceneLoader : MonoBehaviour
 {
     #region Public methods
 
-    public void SceneLoading()
+    public void SceneLoading(int sceneID)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(sceneID);
     }
 
     public void RestartScene()

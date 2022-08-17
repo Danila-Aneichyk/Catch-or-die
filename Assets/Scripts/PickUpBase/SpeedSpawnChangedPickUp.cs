@@ -11,6 +11,6 @@ public class SpeedSpawnChangedPickUp : PickUpBase
 
     protected override void ApplyEffect(Collision2D col)
     {
-        FindObjectOfType<PickUpsFalls>().ChangeSpeed(speed);
+        FindObjectOfType<PickUpsSpawn>().ChangeSpeed(speed);
     }
 }
